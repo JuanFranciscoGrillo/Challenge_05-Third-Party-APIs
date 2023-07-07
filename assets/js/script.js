@@ -14,12 +14,15 @@ $(function () {
     $(".saveBtn").on("click", function () {
         // TODO: Get the user input from the textarea.
         var userInput = $(this).siblings(".description").val();
+        console.log("User input:", userInput);
 
         // TODO: Get the id of the corresponding time-block.
         var timeBlockId = $(this).parent().attr("id");
+        console.log("Time block ID:", timeBlockId);
 
         // TODO: Save the user input in local storage using the time-block id as the key.
         localStorage.setItem(timeBlockId, userInput);
+        console.log("User input saved in local storage.");
     });
 
     // TODO: Add code to apply the past, present, or future class to each time
@@ -31,16 +34,21 @@ $(function () {
 
     function updateHourStyles() {
         var currentHour = dayjs().hour();
+        console.log("Current hour:", currentHour);
 
         $(".time-block").each(function () {
             var timeBlockHour = parseInt($(this).attr("id").split("-")[1]);
+            console.log("Time block hour:", timeBlockHour);
 
             if (timeBlockHour < currentHour) {
                 $(this).removeClass("present future").addClass("past");
+                console.log("Time block is in the past.");
             } else if (timeBlockHour === currentHour) {
                 $(this).removeClass("past future").addClass("present");
+                console.log("Time block is in the present.");
             } else {
                 $(this).removeClass("past present").addClass("future");
+                console.log("Time block is in the future.");
             }
         });
     }
@@ -54,7 +62,10 @@ $(function () {
 
     $(".time-block").each(function () {
         var timeBlockId = $(this).attr("id");
+        console.log("Getting user input for time block ID:", timeBlockId);
+
         var userInput = localStorage.getItem(timeBlockId);
+        console.log("Retrieved user input:", userInput);
 
         $(this).find(".description").val(userInput);
     });
@@ -63,6 +74,6 @@ $(function () {
     // TODO: Display the current date in the header of the page.
 
     var currentDate = dayjs().format("dddd, MMMM D");
+    console.log("Current date:", currentDate);
     $("#currentDay").text(currentDate);
 });
-
