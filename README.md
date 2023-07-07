@@ -28,11 +28,9 @@ The Work Day Scheduler is a simple calendar application that allows users to sav
 
 		I. Clone the repository to your local machine.
 		
-		II. Open the project in your preferred code editor.
+		II. Open the `index.html` file in a web browser.
 		
-		III. Open the `index.html` file in a web browser.
-		
-		IV. The Work Day Scheduler will now be accessible and ready to use.
+		III. The Work Day Scheduler will now be accessible and ready to use.
 
 5. How to Use the Project:
 
