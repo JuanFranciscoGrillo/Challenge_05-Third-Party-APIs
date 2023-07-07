@@ -21,7 +21,8 @@ The Work Day Scheduler is a simple calendar application that allows users to sav
 		https://github.com/JuanFranciscoGrillo/Challenge_05-Third-Party-APIs.gitLinks          
 
 		II. Click on deployed website link:
-		https://juanfranciscogrillo.github.io/Challenge_05-Third-Party-APIs/Links
+
+		https://juanfranciscogrillo.github.io/Challenge_05-Third-Party-APIs/Links
 
 	b. Running the project locally
 
