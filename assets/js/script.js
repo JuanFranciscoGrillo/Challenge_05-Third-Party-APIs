@@ -12,15 +12,15 @@
 $(function () {
     // TODO: Add a listener for click events on the save button.
     $(".saveBtn").on("click", function () {
-        // TODO: Get the user input from the textarea.
+        // Get the user input from the textarea.
         var userInput = $(this).siblings(".description").val();
         console.log("User input:", userInput);
 
-        // TODO: Get the id of the corresponding time-block.
+        // Get the id of the corresponding time-block.
         var timeBlockId = $(this).parent().attr("id");
         console.log("Time block ID:", timeBlockId);
 
-        // TODO: Save the user input in local storage using the time-block id as the key.
+        // Save the user input in local storage using the time-block id as the key.
         localStorage.setItem(timeBlockId, userInput);
         console.log("User input saved in local storage.");
     });
@@ -30,7 +30,6 @@ $(function () {
     // attribute of each time-block be used to conditionally add or remove the
     // past, present, and future classes? How can Day.js be used to get the
     // current hour in 24-hour time?
-    // TODO: Apply the past, present, or future class to each time block.
 
     function updateHourStyles() {
         var currentHour = dayjs().hour();
@@ -58,7 +57,6 @@ $(function () {
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
-    // TODO: Get any user input that was saved in localStorage and set the values of the corresponding textarea elements.
 
     $(".time-block").each(function () {
         var timeBlockId = $(this).attr("id");
@@ -71,7 +69,6 @@ $(function () {
     });
 
     // TODO: Add code to display the current date in the header of the page.
-    // TODO: Display the current date in the header of the page.
 
     var currentDate = dayjs().format("dddd, MMMM D");
     console.log("Current date:", currentDate);
