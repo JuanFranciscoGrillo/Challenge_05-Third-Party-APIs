@@ -48,3 +48,6 @@ The Work Day Scheduler is a simple calendar application that allows users to sav
 
 	g. Manage your daily schedule effectively by updating, adding, or removing events as needed.
 
+6. Screenshot:
+
+	a. assets/images/Work Day Scheduler.gif
